@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/personalizer.css">
+    <title>Personalizer</title>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="personalizer.html">Personalizer</a></li>
-            <li><a href="form.html">Form</a></li>
-            <li><a href="images.html">Images</a></li>
-            <li><a href="mode.html">Mode</a></li>
+            <li>
+                <div>
+                    <button onclick=menu_show() class="dropdown" id="menu_button">Personalizer</button>
+                    <div class="dropdown-content" id="custom-menu">
+                        <div class="menu_bg_colors">
+                            Bg_color
+                            <button class="bg_red">a</button>
+                            <button class="bg_green">b</button>
+                            <button class="bg_blue">c</button>
+                            <button class="bg_gray">d</button>
+                            <button class="bg_black">e</button>
+                        </div>
+                        <div>
+                            Change_Letters
+                        </div>
+                        <div>
+                            a
+                        </div>
+                        <div>
+                            b
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><div><a href="form.html">Form</a></div></li>
+            <li><div><a href="images.html">Images</a></div></li>
+            <li><div><a href="mode.html">Mode</a></div></li>
         </ul>
     </nav>
+
+    <script>
+        function menu_show(){
+            document.getElementById("custom-menu").style.display = "block";
+            document.getElementById( "menu_button" ).setAttribute( "onClick", "javascript: menu_hide();" );
+        }
+
+        function menu_hide(){
+            document.getElementById("custom-menu").style.display = "none";
+            document.getElementById( "menu_button" ).setAttribute( "onClick", "javascript: menu_show();" );
+        }
+    </script>
 </body>
 </html>
