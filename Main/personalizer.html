@@ -15,18 +15,18 @@
                     <div class="dropdown-content" id="custom-menu">
                         <div>
                             <p>Bg_color</p>
-                            <button class="bg_red">
-                            <button class="bg_green">
-                            <button class="bg_blue">
-                            <button class="bg_gray">
-                            <button class="bg_black">
+                            <button class="bg_red"  onclick="bg_color('red')">
+                            <button class="bg_green" onclick="bg_color('green')">
+                            <button class="bg_blue" onclick="bg_color('blue')">
+                            <button class="bg_gray" onclick="bg_color('gray')">
+                            <button class="bg_lightgray" onclick="bg_color('lightgray')">
                         </div>
                         <div>
                             <p>Change Letters</p>
                             <button class="let_red">
                             <button class="let_green">
                             <button class="let_blue">
-                            <button class="let_gray">
+                            <button class="let_white">
                             <button class="let_black">
                         </div>
                         <div>
@@ -41,8 +41,8 @@
                             <button class="let_arial">
                             <button class="let_times">
                             <button class="let_courier">
-                            <button class="let_gray">
-                            <button class="let_black">
+                            <button class="let_verdana">
+                            <button class="let_treb">
                         </div>
                     </div>
                 </div>
@@ -51,6 +51,10 @@
             <li><div><a href="images.html">Images</a></div></li>
         </ul>
     </nav>
+    <div>
+        <h1>Welcome to personalizer!</h1>
+        <p>This is a paragraph which you can adapt its content<br>Click the "personalizer" banner to start</p>
+    </div>
 
     <script>
         function menu_show(){
@@ -61,6 +65,27 @@
         function menu_hide(){
             document.getElementById("custom-menu").style.display = "none";
             document.getElementById( "menu_button" ).setAttribute( "onClick", "javascript: menu_show();" );
+        }
+
+        function bg_color(color){
+
+            switch(color){
+                case "red":
+                    document.body.style.backgroundColor = "lightcoral"
+                break;
+                case "green":
+                    document.body.style.backgroundColor = "lightgreen"
+                break;
+                case "blue":
+                    document.body.style.backgroundColor = "lightblue"
+                break;
+                case "gray":
+                    document.body.style.backgroundColor = "gray"
+                break;
+                case "lightgray":
+                    document.body.style.backgroundColor = "lightgray"
+                break;
+            }
         }
     </script>
 </body>

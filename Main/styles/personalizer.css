@@ -28,8 +28,8 @@ nav{
       font-size: large;
 
       margin: 15px;
-      margin-top: 15;
-      margin-bottom: 15;
+      margin-top: 15px;
+      margin-bottom: 15px;
 
 
       text-decoration: none;
@@ -63,20 +63,46 @@ nav{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 
+  animation: fade 0.8s;
+
   button{
+    animation-name: return_button;
+    animation-duration: 0.15s;
+
     color:#4e4e4e;
     width: 25px;
     height: 25px;
     border:solid;
     border-radius: 25%;
 
-    
+    vertical-align: middle;
     margin: 5px;
   }
 
   button:hover{
-    height: 35px;
+    animation-name: heighten_button;
+    animation-duration: 0.2s;
+
+    height: 30px;
+    color: rgb(138, 100, 6)
   }
+
+  
+}
+
+@keyframes heighten_button {
+    from{height: 25px;color: #4e4e4e;}
+    to{height: 30px;color: rgb(138, 100, 6);}
+}
+
+@keyframes return_button {
+  from{height: 30px;color: rgb(138, 100, 6);}
+  to{height: 25px;color: #4e4e4e;}
+}
+
+@keyframes fade {
+  from{opacity: 0%;}
+  to{opacity: 100%;}
 }
 
 .let_red{
@@ -88,8 +114,8 @@ nav{
 .let_blue{
   background-color: blue;
 }
-.let_gray{
-  background-color: gray;
+.let_white{
+  background-color: white;
 }
 .let_black{
   background-color: black;
@@ -103,11 +129,11 @@ nav{
   background-color: lightgreen;
 }
 .bg_blue{
-  background-color: blue;
+  background-color: lightblue;
 }
 .bg_gray{
   background-color: gray;
 }
-.bg_black{
-  background-color: black;
+.bg_lightgray{
+  background-color: lightgray;
 }
