@@ -20,7 +20,7 @@ nav{
       list-style-type: none;
     }
     
-    li *{
+    li div a{
       color: #fff;
       background-color: #4e4e4e;
       border: none;
@@ -28,29 +28,86 @@ nav{
       font-size: large;
 
       margin: 15px;
+      margin-top: 15;
+      margin-bottom: 15;
+
 
       text-decoration: none;
-      display: block;
+      display: flex;
+
+    }
+
+    li div button{
+      color:#f9f9f9;
+      background-color: #4e4e4e;
+      border: none;
+
+      font-size: large;
+
+      margin: 9px;
+      margin-top: 14px;
+      margin-bottom: 15px;
+
+
+      text-decoration: none;
     }
 }
 
-.dropdown{
-    margin-right: 0;
-    margin-left: 0;
-    padding: 0;
-}
 
 .dropdown-content{
   display: none;
   position: absolute;
+  top: 50px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
   z-index: 1;
+
+  button{
+    color:#4e4e4e;
+    width: 25px;
+    height: 25px;
+    border:solid;
+    border-radius: 25%;
+
+    
+    margin: 5px;
+  }
+
+  button:hover{
+    height: 35px;
+  }
 }
 
-.menu_bg_colors{
-  color: black;
-  background-color: #f9f9f9;
+.let_red{
+  background-color: red;
+}
+.let_green{
+  background-color: green;
+}
+.let_blue{
+  background-color: blue;
+}
+.let_gray{
+  background-color: gray;
+}
+.let_black{
+  background-color: black;
+}
+
+
+.bg_red{
+  background-color: lightcoral;
+}
+.bg_green{
+  background-color: lightgreen;
+}
+.bg_blue{
+  background-color: blue;
+}
+.bg_gray{
+  background-color: gray;
+}
+.bg_black{
+  background-color: black;
 }

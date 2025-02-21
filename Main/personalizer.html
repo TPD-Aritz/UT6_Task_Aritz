@@ -13,35 +13,48 @@
                 <div>
                     <button onclick=menu_show() class="dropdown" id="menu_button">Personalizer</button>
                     <div class="dropdown-content" id="custom-menu">
-                        <div class="menu_bg_colors">
-                            Bg_color
-                            <button class="bg_red">a</button>
-                            <button class="bg_green">b</button>
-                            <button class="bg_blue">c</button>
-                            <button class="bg_gray">d</button>
-                            <button class="bg_black">e</button>
+                        <div>
+                            <p>Bg_color</p>
+                            <button class="bg_red">
+                            <button class="bg_green">
+                            <button class="bg_blue">
+                            <button class="bg_gray">
+                            <button class="bg_black">
                         </div>
                         <div>
-                            Change_Letters
+                            <p>Change Letters</p>
+                            <button class="let_red">
+                            <button class="let_green">
+                            <button class="let_blue">
+                            <button class="let_gray">
+                            <button class="let_black">
                         </div>
                         <div>
-                            a
+                            
+                            <button class="let_xs">
+                            <button class="let_s">
+                            <button class="let_m">
+                            <button class="let_l">
+                            <button class="let_xl">
                         </div>
                         <div>
-                            b
+                            <button class="let_arial">
+                            <button class="let_times">
+                            <button class="let_courier">
+                            <button class="let_gray">
+                            <button class="let_black">
                         </div>
                     </div>
                 </div>
             </li>
             <li><div><a href="form.html">Form</a></div></li>
             <li><div><a href="images.html">Images</a></div></li>
-            <li><div><a href="mode.html">Mode</a></div></li>
         </ul>
     </nav>
 
     <script>
         function menu_show(){
-            document.getElementById("custom-menu").style.display = "block";
+            document.getElementById("custom-menu").style.display = "inline";
             document.getElementById( "menu_button" ).setAttribute( "onClick", "javascript: menu_hide();" );
         }
 

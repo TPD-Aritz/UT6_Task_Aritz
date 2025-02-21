@@ -54,7 +54,7 @@ nav{
       list-style-type: none;
     }
     
-    li *{
+    li a{
       color: #fff;
 
       font-size: large;
