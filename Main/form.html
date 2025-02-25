@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles/form.css">
     <title>Form</title>
 </head>
-<body>
+<body class="light">
 
     <nav>
         <ul>
             <li><a href="personalizer.html">Personalizer</a></li>
-            <li><div><a href="form.html">Form</a></div></li>
-            <li><div><a href="images.html">Images</a></div></li>
-            <li><div><a href="mode.html">Mode</a></div></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><div onclick="darkmode()" id="mode">Mode</div></li>
         </ul>
     </nav>
 
@@ -64,4 +64,15 @@
     </div>
 
 </body>
+<script>
+  function darkmode(){
+    document.body.className="dark";
+    document.getElementById("mode").setAttribute("onClick","javascript: lightmode();");
+  }
+
+  function lightmode(){
+    document.body.className="light";
+    document.getElementById("mode").setAttribute("onClick","javascript: darkmode();");
+  }
+</script>
 </html>

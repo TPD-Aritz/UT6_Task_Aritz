@@ -23,26 +23,26 @@
                         </div>
                         <div>
                             <p>Change Letters</p>
-                            <button class="let_red">
-                            <button class="let_green">
-                            <button class="let_blue">
-                            <button class="let_white">
-                            <button class="let_black">
+                            <button class="let_red" onclick="let_color('red')">
+                            <button class="let_green" onclick="let_color('green')">
+                            <button class="let_blue" onclick="let_color('blue')">
+                            <button class="let_white" onclick="let_color('white')">
+                            <button class="let_black" onclick="let_color('black')">
                         </div>
                         <div>
                             
-                            <button class="let_xs">
-                            <button class="let_s">
-                            <button class="let_m">
-                            <button class="let_l">
-                            <button class="let_xl">
+                            <button class="let_s" onclick="let_size('xs')">xs</button>
+                            <button class="let_s" onclick="let_size('s')">s</button>
+                            <button class="let_s" onclick="let_size('m')">m</button>
+                            <button class="let_s" onclick="let_size('l')">l</button>
+                            <button class="let_s" onclick="let_size('xl')">xl</button>
                         </div>
                         <div>
-                            <button class="let_arial">
-                            <button class="let_times">
-                            <button class="let_courier">
-                            <button class="let_verdana">
-                            <button class="let_treb">
+                            <button class="let_f" onclick="let_font('arial')">ar</button>
+                            <button class="let_f" onclick="let_font('times')">ti</button>
+                            <button class="let_f" onclick="let_font('courier')">co</button>
+                            <button class="let_f" onclick="let_font('verdana')">ve</button>
+                            <button class="let_f" onclick="let_font('treb')">tr</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             <li><div><a href="images.html">Images</a></div></li>
         </ul>
     </nav>
-    <div>
+    <div id="screen_text">
         <h1>Welcome to personalizer!</h1>
         <p>This is a paragraph which you can adapt its content<br>Click the "personalizer" banner to start</p>
     </div>
@@ -87,6 +87,91 @@
                 break;
             }
         }
+
+        function let_color(color){
+
+            switch(color){
+                case "red":
+                    document.getElementById("screen_text").style.color  = "red"
+                break;
+                case "green":
+                    document.getElementById("screen_text").style.color = "green"
+                break;
+                case "blue":
+                    document.getElementById("screen_text").style.color = "blue"
+                break;
+                case "white":
+                    document.getElementById("screen_text").style.color = "white"
+                break;
+                case "black":
+                    document.getElementById("screen_text").style.color = "black"
+                break;
+            }
+        }
+
+        function let_color(color){
+
+            switch(color){
+                case "red":
+                    document.getElementById("screen_text").style.color  = "red"
+                break;
+                case "green":
+                    document.getElementById("screen_text").style.color = "green"
+                break;
+                case "blue":
+                    document.getElementById("screen_text").style.color = "blue"
+                break;
+                case "white":
+                    document.getElementById("screen_text").style.color = "white"
+                break;
+                case "black":
+                    document.getElementById("screen_text").style.color = "black"
+                break;
+            }
+        }
+
+        function let_size(size){
+
+            switch(size){
+                case "xs":
+                    document.getElementById("screen_text").style.fontSize  = "small"
+                break;
+                case "s":
+                    document.getElementById("screen_text").style.fontSize  = "smaller"
+                break;
+                case "m":
+                    document.getElementById("screen_text").style.fontSize  = "medium"
+                break;
+                case "l":
+                    document.getElementById("screen_text").style.fontSize  = "large"
+                break;
+                case "xl":
+                    document.getElementById("screen_text").style.fontSize  = "larger"
+                break;
+            }
+        }
+        function let_font(font){
+
+            switch(font){
+                case "arial":
+                    document.getElementById("screen_text").style.fontFamily   = "Arial, Helvetica, sans-serif"
+                break;
+                case "times":
+                    document.getElementById("screen_text").style.fontFamily   = "'Times New Roman', Times, serif"
+                break;
+                case "courier":
+                    document.getElementById("screen_text").style.fontFamily   = "'Courier New', Courier, monospace"
+                break;
+                case "verdana":
+                    document.getElementById("screen_text").style.fontFamily  = "Verdana, Geneva, Tahoma, sans-serif"
+                break;
+                case "treb":
+                    document.getElementById("screen_text").style.fontFamily  = "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+                break;
+            }
+        }
+
+        
     </script>
 </body>
 </html>
