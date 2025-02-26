@@ -109,3 +109,15 @@ nav{
   from{background-color: black;}
   to{background-color: white;}
 }
+
+#mode{
+  cursor: pointer;
+}
+
+#province-row{
+  display: 	none;
+}
+
+#town-row{
+  display: 	none;
+}

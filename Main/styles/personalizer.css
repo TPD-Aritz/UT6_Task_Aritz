@@ -152,3 +152,6 @@ nav{
 
 }
 
+.dropdown{
+  cursor: pointer;
+}

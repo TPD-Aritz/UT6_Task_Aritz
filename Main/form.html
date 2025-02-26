@@ -27,8 +27,12 @@
     
           <div class="form-row">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <label for="email" id="validEmail"></label>
+            <input type="text" id="email" name="email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-row">
+            <button type="button" onclick="checkemail()">Validate</button> 
+            <div id="validEmail"></div>
           </div>
 
           <div class="form-row">
@@ -56,6 +60,26 @@
               <option value="alb">Albania</option>
             </select>
           </div>
+
+          <div class="form-row" id="province-row">
+            <select id="province" name="province">
+              <option value="">Select your province</option>
+              <option value="na">Nafarroa</option>
+              <option value="esp">Spain</option>
+              <option value="can">Canada</option>
+              <option value="alb">Albania</option>
+            </select>
+          </div>
+
+          <div class="form-row" id="town-row">
+            <select id="town" name="town">
+              <option value="">Select your town</option>
+              <option value="na">Nafarroa</option>
+              <option value="esp">Spain</option>
+              <option value="can">Canada</option>
+              <option value="alb">Albania</option>
+            </select>
+          </div>
     
           <div class="form-row">
             <button type="submit" class="submit-btn">Send</button>
@@ -73,6 +97,24 @@
   function lightmode(){
     document.body.className="light";
     document.getElementById("mode").setAttribute("onClick","javascript: darkmode();");
+  }
+
+  function checkemail(){
+    let text = document.getElementById("email").value;
+
+    let pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+
+    if(text != ""){
+      if (pattern.test(text)){
+        document.getElementById("validEmail").innerHTML = text + " is a valid email address"
+        document.getElementById("validEmail").style.color = "green";
+      }else{
+        document.getElementById("validEmail").innerHTML = text + " is not a valid email address"
+        document.getElementById("validEmail").style.color = "red";
+      }
+    }else{
+      document.getElementById("validEmail").innerHTML = "";
+    }
   }
 </script>
 </html>
