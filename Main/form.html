@@ -56,7 +56,7 @@
               <option value="">Select your country</option>
               <option value="eh">Euskal herria</option>
               <option value="esp">Spain</option>
-              <option value="can">Canada</option>
+              <option value="alb">Albania</option>
             </select>
           </div>
 
@@ -127,10 +127,10 @@
       document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='eh1'>Nafarroa</option> <option value='eh2'>Bizkaia</option> <option value='eh3'>Gipuzkoa</option> <option value='eh4'>Araba</option>"
       break;
       case "esp":
-      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='esp1'>esp1</option> <option value='esp2'>esp2</option> <option value='esp3'>esp3</option> <option value='esp4'>esp4</option>"
+      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='esp1'>Galicia</option> <option value='esp2'>Aragón</option> <option value='esp3'>Murcia</option> <option value='esp4'>Canary Islands</option>"
       break;
-      case "can":
-      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='na'>na1</option> <option value='esp'>na2</option> <option value='can'>na3</option> <option value='alb'>na4</option>"
+      case "alb":
+      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='alb1'>Tirana</option> <option value='alb2'>Fier</option> <option value='alb3'>Korçë</option>"
       break;
 
     //EH
@@ -147,16 +147,53 @@
 
       //Gipuzkoa
       case "eh3":
-      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Don'>Donostia</option> <option value='Ger'>Gernika</option> <option value='Lek'>Lekeitio</option>"
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Don'>Donostia</option> <option value='Ir'>Irun</option> <option value='Pas'>Pasaia</option>"
       break;
 
       //Araba
       case "eh4":
-      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Gaz'>Gazteiz</option> <option value='Ger'>Gernika</option> <option value='Lek'>Lekeitio</option>"
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Gaz'>Gazteiz</option> <option value='Am'>Amurrio</option>"
+      break;
+
+    //SP
+
+      //Galicia
+      case "esp1":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='lug'>Lugo</option> <option value='Cor'>Coruña</option> <option value='comp'>Santiago de Compostela</option>"
+      break;
+
+      //Aragon
+      case "esp2":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Zar'>Zaragoza</option> <option value='Hu'>Huesca</option> <option value='ter'>Teruel</option> <option value='Boq'>Boquiñeni</option>"
+      break;
+
+      //Murcia
+      case "esp3":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='CMur'>Murcia</option>"
+      break;
+
+      //Canary islands
+      case "esp4":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='GCan'>Gran Canaria</option> <option value='Pal'>Palma</option>"
+      break;
+
+    //ALB
+
+      //Tirana
+      case "alb1":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Tir'>Tirana</option> <option value='Mul'>Mullet</option> <option value='Shk'>Shkozë</option>"
+      break;
+
+      //Fier
+      case "alb2":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Fi'>Fier</option> <option value='Pa'>Patos</option> <option value='Ro'>Roskovec</option>"
+      break;
+
+      //Korçë
+      case "alb3":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Kor'>Korçë</option> <option value='Ma'>Maliq</option>"
       break;
     }
-
-    
 
   }
 </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/css_gif.gif" type="image/x-icon">
+    <link rel="stylesheet" href="styles/images.css">
+    <title>Form</title>
+</head>
+<body class="light">
+
+    <nav>
+        <ul>
+            <li><a href="personalizer.html">Personalizer</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><div onclick="darkmode()" id="mode">Mode</div></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h3>Magic button: Create and change image</h3>
+        <div id="place_image"></div>
+        <button>Choose image!</button>
+    </div>
+
+    <div class="container">
+        <h3>AutoLoading</h3>
+        <div id="autoImg"></div>
+    </div>
+</body>
+<script>
+    function chooseImage(){
+        let images = ["images/img1.png", "images/img2.png", "images/img3.png", "images/img4.png", "images/gif.gif"]
+
+        let num = 1
+
+        console.log()
+
+        document.getElementById(place_image).innerHTML = "<img src = \""+images[num]+"\">"
+    }
+
+    function darkmode(){
+        document.body.className="dark";
+        document.getElementById("mode").setAttribute("onClick","javascript: lightmode();");
+    }
+
+    function lightmode(){
+        document.body.className="light";
+        document.getElementById("mode").setAttribute("onClick","javascript: darkmode();");
+    }
+</script>
+</html>
