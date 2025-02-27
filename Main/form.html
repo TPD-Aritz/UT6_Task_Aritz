@@ -52,32 +52,23 @@
     
           <div class="form-row">
             <label for="country">Country:</label>
-            <select id="country" name="country">
+            <select id="country" name="country" onchange="checkval('country')">
               <option value="">Select your country</option>
-              <option value="na">Nafarroa</option>
+              <option value="eh">Euskal herria</option>
               <option value="esp">Spain</option>
               <option value="can">Canada</option>
-              <option value="alb">Albania</option>
             </select>
           </div>
 
           <div class="form-row" id="province-row">
-            <select id="province" name="province">
-              <option value="">Select your province</option>
-              <option value="na">Nafarroa</option>
-              <option value="esp">Spain</option>
-              <option value="can">Canada</option>
-              <option value="alb">Albania</option>
+            <select id="province" name="province" onchange="checkval('province')">
+
             </select>
           </div>
 
           <div class="form-row" id="town-row">
             <select id="town" name="town">
-              <option value="">Select your town</option>
-              <option value="na">Nafarroa</option>
-              <option value="esp">Spain</option>
-              <option value="can">Canada</option>
-              <option value="alb">Albania</option>
+
             </select>
           </div>
     
@@ -115,6 +106,58 @@
     }else{
       document.getElementById("validEmail").innerHTML = "";
     }
+  }
+
+  function checkval(id){
+    let val = document.getElementById(id).value
+      if(id == "country" && val != ""){
+        show('province',val);
+      }else if(id == "province" && val != ""){
+        show('town',val);
+      }
+  }
+
+  function show(id,val){
+    document.getElementById(id+"-row").style.display = "flex"
+    
+    switch(val){
+    //Country
+
+      case "eh":
+      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='eh1'>Nafarroa</option> <option value='eh2'>Bizkaia</option> <option value='eh3'>Gipuzkoa</option> <option value='eh4'>Araba</option>"
+      break;
+      case "esp":
+      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='esp1'>esp1</option> <option value='esp2'>esp2</option> <option value='esp3'>esp3</option> <option value='esp4'>esp4</option>"
+      break;
+      case "can":
+      document.getElementById(id).innerHTML = "<option value=''>Select your province</option> <option value='na'>na1</option> <option value='esp'>na2</option> <option value='can'>na3</option> <option value='alb'>na4</option>"
+      break;
+
+    //EH
+
+      //Nafarroa
+      case "eh1":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='abl'>Ablitas</option> <option value='Taf'>Tafalla</option> <option value='Pamp'>Iruña</option>"
+      break;
+
+      //Bizkaia
+      case "eh2":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Bil'>Bilbao</option> <option value='Ger'>Gernika</option> <option value='Lek'>Lekeitio</option>"
+      break;
+
+      //Gipuzkoa
+      case "eh3":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Don'>Donostia</option> <option value='Ger'>Gernika</option> <option value='Lek'>Lekeitio</option>"
+      break;
+
+      //Araba
+      case "eh4":
+      document.getElementById(id).innerHTML = "<option value=''>Select your town</option> <option value='Gaz'>Gazteiz</option> <option value='Ger'>Gernika</option> <option value='Lek'>Lekeitio</option>"
+      break;
+    }
+
+    
+
   }
 </script>
 </html>
