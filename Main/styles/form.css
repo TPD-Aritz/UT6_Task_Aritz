@@ -24,7 +24,7 @@
   border: hidden;
   border-radius: 10px;
 
-  box-shadow:0px 0px 30px rgb(92, 92, 92);
+  box-shadow:0px 0px 30px rgb(0, 0, 0, 0.4);
 
   font-weight: bold;
 }
@@ -45,6 +45,10 @@
 
 .form-row label{
   margin-bottom: 10px;
+}
+
+#validEmail{
+  margin-top: 15px;
 }
 
 nav{

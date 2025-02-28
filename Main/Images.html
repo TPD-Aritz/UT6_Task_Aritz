@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/images.css">
     <title>Form</title>
 </head>
-<body class="light">
+<body class="light" onload="randomImg()">
 
     <nav>
         <ul>
@@ -20,8 +20,8 @@
 
     <div class="container">
         <h3>Magic button: Create and change image</h3>
+        <button onclick="chooseImage('place_image')">Choose image!</button>
         <div id="place_image"></div>
-        <button>Choose image!</button>
     </div>
 
     <div class="container">
@@ -30,24 +30,29 @@
     </div>
 </body>
 <script>
-    function chooseImage(){
-        let images = ["images/img1.png", "images/img2.png", "images/img3.png", "images/img4.png", "images/gif.gif"]
+    function chooseImage(elem){
+        let images = ['images/img1.png', 'images/img2.png', 'images/img3.png', 'images/img4.jpg', 'images/gif.gif']
 
-        let num = 1
+        let num = Math.floor(Math.random() * (4 - 0 + 1))
 
-        console.log()
+        document.getElementById(elem).innerHTML = "<img src = \""+images[num]+"\" height=\"150\">"
+    }
 
-        document.getElementById(place_image).innerHTML = "<img src = \""+images[num]+"\">"
+    function randomImg(){
+        chooseImage('autoImg');
+        setTimeout(randomImg, 450);
     }
 
     function darkmode(){
         document.body.className="dark";
         document.getElementById("mode").setAttribute("onClick","javascript: lightmode();");
+        document.getElementById("mode").innerHTML = "Dark";
     }
 
     function lightmode(){
         document.body.className="light";
         document.getElementById("mode").setAttribute("onClick","javascript: darkmode();");
+        document.getElementById("mode").innerHTML = "Light";
     }
 </script>
 </html>
